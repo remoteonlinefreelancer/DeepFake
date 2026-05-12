@@ -21,10 +21,6 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{kalman1960}
-R.~E. Kalman, ``{A new approach to linear filtering and prediction problems},''
-  \emph{J. Basic Eng-T ASME}, no. 82 (Series D), pp. 35--45, 1960.
-
 \bibitem{Isard98condensation}
 M.~Isard and A.~Blake, ``Condensation - conditional density propagation for
   visual tracking,'' \emph{Int. J. Comput. Vision}, vol.~29, no.~1, pp. 5--28,
