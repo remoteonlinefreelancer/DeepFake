@@ -146,82 +146,92 @@ The objective of this research is to develop a robust multimodal framework capab
 
 \chapter{Literature Survey} 
 \label{ch:literature_survey}
-\section{Particle Filtering}
-\label{sec:particle_filtering}
-We aim to track regions chosen on an object in a sequence of image frames. The states of these regions will be represented by \textit{partitions} where the current state of partition $i$ is denoted by $x_i$. In our implementation each partition has a reference image (template) and a state that consists of the partition's coordinates in the 2D image frame. 
+\section{Visual Detection Methods}
+\label{sec:visual_detection_methods}
+Early research focused on visual inconsistencies in manipulated videos. Works such as FaceForensics++ by Andreas Rossler introduced benchmark datasets and CNN-based detection models. Architectures like XceptionNet and EfficientNet were widely used.
+These methods detect:
+\begin{itemize}
+\item testure artifacts
+\item blending errors
+\item lighting inconsistencies
+\end{itemize}
 
-When we model state transition as a Markov chain with independent observations, the posterior probability of state for a particle is defined as:
-\begin{equation}
-\label{eq:posterior_prob_1}
-p(x_i^t|\mathbf{Z}^t) \propto p(\mathbf{z}^t|x_i^t)p(x_i^t|\mathbf{Z}^{t-1})
-\end{equation}
+However, they fail under compression and unseen manipulations.
 
-\begin{equation}
-\label{eq:posterior_prob_2}
-p(x_i^t|\mathbf{Z}^{t-1}) = \sum_{x_i^{t-1}} p(x_i^t|x_i^{t-1})p(x_i^{t-1}|\mathbf{Z}^{t-1})
-\end{equation} 
+\section{Audio-Based Detection Methods}
+\label{sec:audioBased_detection_methods}
+Audio deepfake detection uses MFCC features, spectrograms, and transformer models. ASVspoof datasets became standard benchmarks. Despite good performance on known attacks, modern neural voice synthesis reduces detectable artifacts significantly.
 
-Probability of the assumed state (\ref{eq:posterior_prob_1}) $x_i^t$ is proportional to the probability of reaching this state after observations $\mathbf{Z^{t-1}}=\{\mathbf{z}^{0},\cdots,\mathbf{z}^{t-1}\}$ and the probability of the current observation in this state. Probability of transition from the previous probability density to the assumed state (\ref{eq:posterior_prob_2}) is found over the dynamic transition model and the posterior probabilities of this partition's particles from the previous time step. Reader is referred to \cite{Isard98condensation} for a complete derivation of posterior probability of state. 
+\section{Temporal and Multimodal Methods}
+\label{sec:temporal_and_multimodal_methods}
+Temporal models analyze motion consistency across frames, detecting blinking patterns and lip-sync mismatches. Multimodal approaches combine audio-visual features using fusion networks.
+These systems outperform single-modality models but still face:
+\begin{itemize}
+\item high-computational cost
+\item poor explainability
+\item limited real-time use
+\end{itemize}
 
-\subsection{Condensation algorithm}
-\label{sec:condensation}
-Condensation algorithm \cite{Isard98condensation} extends posterior probability density approximation to a sequence of frames. The iteration capitalizes on Markov chain assumption, i.e. the likelihood of a state depends on the probability density of the previous state, the probability of transition into the current state using the dynamic model and the current observation. 
+\section{Research Gap}
+\label{sec:research_gap}
+Existing systems fail to generalize across datasets and rely heavily on modality-specific artifacts. This motivates multimodal cross-consistency analysis to improve robustness.
 
-Given the posterior probability density for the previous time step $p(x_i^{t-1}|\mathbf{Z}^{t-1})$, which is represented with a set of particles and their probabilities $\{s_{ik}^{t-1},\pi_{ik}^{t-1}\}$, $k=\{1,\cdots,M\}$, condensation algorithm proceeds as follows:
+\section{Relation to Research Question}
+\label{sec:relation_to_research_question}
+This directly supports the research question:\\
+\textbf{How can multimodal deepfake detection improve robustness compared to single-modality approaches?}
 
-\begin{enumerate}
-\item Sample $M$ particles from $\{s_{ik}^{t-1},\pi_{ik}^{t-1}\}$.
-\item Predict new states for particles using the dynamic model $s_{ik}^t=p(x_i^t|x_i^{t-1}=s_{ik}^{t-1})$.
-\item Evaluate particles with respect to the current observation $\pi_{ik}^t\propto p(\mathbf{z}^t|x_i^t=s_{ik}^t)$.
-\end{enumerate}
-
-The dynamic model in this algorithm consists of drift and diffusion. Drift is deterministic motion defined with velocity and acceleration, and is common for all particles of a partition. Diffusion on the other hand is Brownian motion; random movements that split particles at the identical state and enable search in the image space through random walk. 
 
 \chapter{Approach} 
 \label{ch:approach}
-The PFFL algorithm leverages the dependent behavior of multiple partitions on a single object. In the general sense, the interdependency of partitions can be incorporated either as constraints in the dynamic model $p(x_i^t|x_i^{t-1})$, or in choosing $N$ particles from the posterior of $N$ partitions through proposal function $g(\mathbf{x}^t)$. In this study we first propose a transition model that provides an estimation for dependent drift of partitions. Second, we relieve the factorization constraint in the proposal function $g(\mathbf{x}^t)$ and propose a simple and computationally efficient model for modeling the joint probabilities of partitions.
+\section{Overall Approach}
+\label{sec:overall_approach}
+The proposed system integrates visual, audio, and temporal analysis to detect inconsistencies across modalities. Unlike traditional systems, it focuses on cross-modal verification rather than isolated detection.
+
+\section{System Architecture}
+\label{sec:system_architecture}
+The system includes:
+\begin{itemize}
+\item \textbf{Visual Module:} CNN-based feature extraction (Xception/EfficientNet)
+\item \textbf{Audio Module:} Transformer-based speech analysis
+\item \textbf{Temporal Module:} Sequential frame consistency analysis
+\item \textbf{Fusion Module:} Attention-based integration
+\end{itemize}
+
+Final classification outputs real/fake probability.
+
+\section{Dataset}
+\label{sec:dataset}
+\begin{itemize}
+\item FaceForensics++
+\item Celeb-DF
+\item DFDC
+\item ASVspoof
+\end{itemize}
+
+Preprocessing includes face extraction, audio segmentation, and normalization.
+
+\section{Expected Contribution}
+\begin{itemize}
+	\item Improved multimodal detection accuracy
+	\item Better generalization across datasets
+	\item Enhanced robustness against modern deepfakes
+	\item Potential deployment in cybersecurity systems
+\end{itemize}
 
 \chapter{Results and Discussion} 
 \label{ch:results}
-Figure (\ref{fig:proposal_function}) presents a 2D plot of the magnitude of the proposal function for the partition at the mouth of a gourami. When the scaling factor $\sigma_p$ is low, relative motion between the partitions are more restricted and the object is considered to be more rigid. The partitions move more freely against each other as the scaling factor increases. 
+comming soon...
 
-\begin{figure}
-\includegraphics[width=1\textwidth,height=0.44\textheight]{proposal_function.eps}
-\includegraphics[width=1\textwidth,height=0.44\textheight]{probability_field.eps}
-\caption{Probability field for the partition at the mouth of a gourami. Top: The magnitude of the proposal function is depicted with shades of gray. For demonstration purposes, the scaling factor is chosen higher than the actual implementation. Bottom: 3D plot of the probability field.}
-\label{fig:proposal_function}       
-\end{figure}
-
-In the first two tracking scenarios we test the capabilities of these three algorithms (the proposed algorithm, PFFL and SPOT) to deal with occlusion and clutter. In both scenarios the task is to track an object in a crowded scene of similar objects. As shown in Table (\ref{table:videos}), \textit{platty} is a publicly available high-definition video of a crowded school of fish. \textit{Skydiving} is a challenging video as it is low resolution and the skydivers' jumpsuits are very similar. In the third scenario we assess the tracking algorithms on sudden changes in transition dependencies of partitions. In this scenario we use a face video from the MMI facial expression database \cite{pantic2005}. This video is carefully selected to exhibit relative motion and speed reversals (e.g. blinking, neutral-smile-neutral) together with rigid body motion (e.g. head movements) of the features. 
-
-\begin{table}
-\centering
-\begin{tabular}{|l|l|l|}
-	\hline
-		Video & Resolution & Frames \\
-	\hline	
-		Platty \cite{fishcouk} & 1080$\times$1920& 110\\
-	\hline
-		Skydiving \cite{zhang2013} & 480$\times$656& 300\\
-	\hline
-		Face \cite{pantic2005} & 576$\times$720& 127\\
-	\hline
-\end{tabular}
-\caption{Evaluation of tracking algorithms on three scenarios; platty, skydiving and face. The length of segment that is used in experiments is indicated by the number of frames.}
-\label{table:videos}
-\end{table}
-
-Figure (\ref{fig:error_platty_comparison}) compares tracking performances of the proposed algorithm, PFFL and SPOT. In this figure, average relative error over 12 tracking points is plotted against the frame numbers. Tracking error in PFFL parts from the other two algorithms starting from frame 20. At the end of the experiment, average relative error with PFFL is about an order of magnitude higher than the other two algorithms. SPOT occasionally drifts due to the imprecision of its observation model. Both proposed algorithm and SPOT highly benefit from the configuration based proposal function and manage to keep the general structure of platty until the end of the experiment. 
-
-\begin{figure}
-\includegraphics[width=1\textwidth]{error_platty_comparison.eps}
-\caption{Comparison of average error on platty for the proposed algorithm (10 particles), PFFL (50 particles) and SPOT. Data markers depict the average relative error for 12 partitions for each frame.}
-\label{fig:error_platty_comparison} 
-\end{figure}
+% \begin{figure}
+% \includegraphics[width=1\textwidth]{error_platty_comparison.eps}
+% \caption{Comparison of average error on platty for the proposed algorithm (10 particles), PFFL (50 particles) and SPOT. Data markers depict the average relative error for 12 partitions for each frame.}
+% \label{fig:error_platty_comparison} 
+% \end{figure}
 
 \chapter{Conclusion} 
 \label{ch:conclusion}
-In this paper we present two contributions to tracking multiple partitions of a deformable object with particle filtering. Our first contribution is in \textit{drift}; the deterministic motion of a partition with respect to other partitions. The second contribution is in selection of particles from probability densities of partitions such that the set of particles represent a viable and likely current state of the object. 
+comming soon... 
 
 %% ----------------------------------------------------------------
 

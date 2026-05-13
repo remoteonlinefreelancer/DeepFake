@@ -278,6 +278,7 @@
 \renewcommand\tableofcontents{\pagestyle{empty} 
 \setlength{\voffset}{-2.1cm}
 \btypeout{Table of Contents}
+\addtotoc{Table of Contents}
 \begin{spacing}{1}{
     \setlength{\parskip}{1pt}
     \if@twocolumn

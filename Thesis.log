@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.30)  13 MAY 2026 02:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.30)  13 MAY 2026 04:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -561,11 +561,11 @@ Package marginnote Info: xpos seems to be 186.08101pt on input line 16.
  Table of Contents
 ------------------------------------------------------------------------------
 (Thesis.toc
-LaTeX Font Info:    Trying to load font information for U+msa on input line 11.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 12.
  (C:\Users\TikTak\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 11.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 12.
  (C:\Users\TikTak\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
@@ -630,64 +630,25 @@ Chapter 3.
 ------------------------------------------------------------------------------
 [4
 
-]
+] [5]
 Chapter 4.
 ------------------------------------------------------------------------------
  4 Results and Discussion
 ------------------------------------------------------------------------------
-Package epstopdf Info: Source file: <figures/proposal_function.eps>
-(epstopdf)                    date: 2026-03-30 14:08:56
-(epstopdf)                    size: 792173 bytes
-(epstopdf)             Output file: <figures/proposal_function-eps-converted-to.pdf>
-(epstopdf)                    date: 2026-03-30 14:08:56
-(epstopdf)                    size: 12050 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=figures/proposal_function-eps-converted-to.pdf figures/proposal_function.eps>
-(epstopdf)             \includegraphics on input line 189.
-Package epstopdf Info: Output file is already uptodate.
-<figures/proposal_function-eps-converted-to.pdf, id=181, 484.81125pt x 268.00125pt>
-File: figures/proposal_function-eps-converted-to.pdf Graphic file (type pdf)
-<use figures/proposal_function-eps-converted-to.pdf>
-Package pdftex.def Info: figures/proposal_function-eps-converted-to.pdf  used on input line 189.
-(pdftex.def)             Requested size: 413.22334pt x 293.326pt.
-Package epstopdf Info: Source file: <figures/probability_field.eps>
-(epstopdf)                    date: 2026-03-30 14:08:56
-(epstopdf)                    size: 25466652 bytes
-(epstopdf)             Output file: <figures/probability_field-eps-converted-to.pdf>
-(epstopdf)                    date: 2026-03-30 14:08:56
-(epstopdf)                    size: 285233 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=figures/probability_field-eps-converted-to.pdf figures/probability_field.eps>
-(epstopdf)             \includegraphics on input line 190.
-Package epstopdf Info: Output file is already uptodate.
-<figures/probability_field-eps-converted-to.pdf, id=182, 1444.39626pt x 676.5275pt>
-File: figures/probability_field-eps-converted-to.pdf Graphic file (type pdf)
-<use figures/probability_field-eps-converted-to.pdf>
-Package pdftex.def Info: figures/probability_field-eps-converted-to.pdf  used on input line 190.
-(pdftex.def)             Requested size: 413.19998pt x 293.33737pt.
-[5
+[6
 
-] [6 <./figures/proposal_function-eps-converted-to.pdf> <./figures/probability_field-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <figures/error_platty_comparison.eps>
-(epstopdf)                    date: 2026-03-30 14:08:56
-(epstopdf)                    size: 26677 bytes
-(epstopdf)             Output file: <figures/error_platty_comparison-eps-converted-to.pdf>
-(epstopdf)                    date: 2026-03-30 14:08:56
-(epstopdf)                    size: 7492 bytes
-(epstopdf)             Command: <miktex-epstopdf --outfile=figures/error_platty_comparison-eps-converted-to.pdf figures/error_platty_comparison.eps>
-(epstopdf)             \includegraphics on input line 217.
-Package epstopdf Info: Output file is already uptodate.
-<figures/error_platty_comparison-eps-converted-to.pdf, id=228, 1203.49625pt x 590.205pt>
-File: figures/error_platty_comparison-eps-converted-to.pdf Graphic file (type pdf)
-<use figures/error_platty_comparison-eps-converted-to.pdf>
-Package pdftex.def Info: figures/error_platty_comparison-eps-converted-to.pdf  used on input line 217.
-(pdftex.def)             Requested size: 413.20515pt x 202.63931pt.
- [7 <./figures/error_platty_comparison-eps-converted-to.pdf>]
+]
 Chapter 5.
 ------------------------------------------------------------------------------
  5 Conclusion
 ------------------------------------------------------------------------------
-[8
+[7
 
-] (Thesis.bbl) [9
+] (Thesis.bbl
+
+LaTeX Warning: Empty `thebibliography' environment on input line 24.
+
+) [8
 
 
 ] (Thesis.aux)
@@ -696,20 +657,20 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: BDEA05361ED8ACF97AAC91DB74E1CDA1;1761.
+(rerunfilecheck)             Checksum: 1AA452541E67709A20D2C18731273857;3204.
  ) 
 Here is how much of TeX's memory you used:
- 14059 strings out of 467871
- 224409 string characters out of 5417892
- 628343 words of memory out of 5000000
- 42665 multiletter control sequences out of 15000+600000
- 636118 words of font info for 70 fonts, out of 8000000 for 9000
+ 14013 strings out of 467871
+ 222774 string characters out of 5417892
+ 627364 words of memory out of 5000000
+ 42626 multiletter control sequences out of 15000+600000
+ 635487 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 78i,11n,81p,1237b,508s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/TikTak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/TikTak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/TikTak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/TikTak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/TikTak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/TikTak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/TikTak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/TikTak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/TikTak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/TikTak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/TikTak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Users/TikTak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/TikTak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/TikTak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/TikTak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Thesis.pdf (20 pages, 516496 bytes).
+ 78i,11n,81p,1237b,520s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\TikTak\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/TikTak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/TikTak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/TikTak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/TikTak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl12.pfb>
+Output written on Thesis.pdf (19 pages, 102511 bytes).
 PDF statistics:
- 326 PDF objects out of 1000 (max. 8388607)
- 53 named destinations out of 1000 (max. 500000)
- 128 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 239 PDF objects out of 1000 (max. 8388607)
+ 48 named destinations out of 1000 (max. 500000)
+ 177 words of extra memory for PDF output out of 10000 (max. 10000000)
 

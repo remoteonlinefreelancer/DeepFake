@@ -3,14 +3,22 @@
 \contentsline {chapter}{Acknowledgements}{iv}{dummy.3}%
 \vspace {1em}
 \thispagestyle {empty}
-\contentsline {chapter}{List of Tables}{vii}{dummy.5}%
-\contentsline {chapter}{List of Figures}{viii}{dummy.7}%
-\contentsline {chapter}{List of Abbreviations}{ix}{dummy.9}%
-\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.11}%
-\contentsline {chapter}{\numberline {2}Literature Survey}{2}{chapter.12}%
-\contentsline {section}{\numberline {2.1}Particle Filtering}{2}{section.13}%
-\contentsline {subsection}{\numberline {2.1.1}Condensation algorithm}{3}{subsection.16}%
-\contentsline {chapter}{\numberline {3}Approach}{4}{chapter.20}%
-\contentsline {chapter}{\numberline {4}Results and Discussion}{5}{chapter.21}%
-\contentsline {chapter}{\numberline {5}Conclusion}{8}{chapter.25}%
-\contentsline {chapter}{Reference}{9}{dummy.26}%
+\contentsline {chapter}{Table of Contents}{vi}{dummy.4}%
+\contentsline {chapter}{List of Tables}{vii}{dummy.6}%
+\contentsline {chapter}{List of Figures}{viii}{dummy.8}%
+\contentsline {chapter}{List of Abbreviations}{ix}{dummy.10}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.12}%
+\contentsline {chapter}{\numberline {2}Literature Survey}{2}{chapter.13}%
+\contentsline {section}{\numberline {2.1}Visual Detection Methods}{2}{section.14}%
+\contentsline {section}{\numberline {2.2}Audio-Based Detection Methods}{2}{section.15}%
+\contentsline {section}{\numberline {2.3}Temporal and Multimodal Methods}{3}{section.16}%
+\contentsline {section}{\numberline {2.4}Research Gap}{3}{section.17}%
+\contentsline {section}{\numberline {2.5}Relation to Research Question}{3}{section.18}%
+\contentsline {chapter}{\numberline {3}Approach}{4}{chapter.19}%
+\contentsline {section}{\numberline {3.1}Overall Approach}{4}{section.20}%
+\contentsline {section}{\numberline {3.2}System Architecture}{4}{section.21}%
+\contentsline {section}{\numberline {3.3}Dataset}{5}{section.22}%
+\contentsline {section}{\numberline {3.4}Expected Contribution}{5}{section.23}%
+\contentsline {chapter}{\numberline {4}Results and Discussion}{6}{chapter.24}%
+\contentsline {chapter}{\numberline {5}Conclusion}{7}{chapter.25}%
+\contentsline {chapter}{Reference}{8}{dummy.26}%
