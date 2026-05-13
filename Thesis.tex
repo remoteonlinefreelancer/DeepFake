@@ -71,7 +71,7 @@
 
 \addtotoc{Abstract}  
 \abstract{ 
-\noindent Deepfake technology has rapidly evolved due to advancements in generative AI models such as GANs, diffusion models, and neural voice synthesis systems. While these technologies enable realistic synthetic media generation, they also introduce significant cybersecurity threats including identity fraud, misinformation, and biometric spoofing. Existing detection approaches often rely on single-modality analysis (visual or audio), which limits robustness against modern high-quality deepfakes. This research investigates a multimodal deepfake detection framework that integrates visual, audio, and temporal features to improve detection accuracy and generalization. The proposed system leverages convolutional neural networks, transformer-based encoders, and attention-based fusion mechanisms to identify inconsistencies across modalities. Benchmark datasets such as FaceForensics++, DFDC, Celeb-DF, and ASVspoof are considered for evaluation. The expected outcome is a more robust and generalizable detection system suitable for real-world cybersecurity applications.
+\noindent Deepfake technology has rapidly evolved due to advancements in generative AI models such as GANs, diffusion models, and neural voice synthesis systems. While these technologies enable realistic synthetic media generation, they also introduce significant cybersecurity threats including identity fraud, misinformation, and biometric spoofing. Existing detection approaches often rely on single-modality analysis (visual or audio), which limits robustness against modern high-quality deepfakes. This research investigates a multimodal deepfake detection framework that integrates visual, audio, and temporal features to improve detection accuracy and generalization. The proposed system leverages convolutional neural networks, transformer-based encoders, and attention-based fusion mechanisms to identify inconsistencies across modalities. Benchmark datasets such as FaceForensics++, DFDC, Celeb-DF, and ASVspoof are considered for evaluation. The expected outcome is a more robust and generalizable detection system suitable for real-world cybersecurity applications. \cite{rossler2019faceforensics}-\cite{asvspoof2021}
 
 \vspace{1em}
 
@@ -137,10 +137,9 @@ Technological Research Council of Turkey (T\"{U}B\.{I}TAK) Grant No:
 \mainmatter   
 \pagestyle{plain}
 \chapter{Introduction} 
-Deepfakes are AI-generated or manipulated multimedia content designed to mimic real human identities. With the rapid development of deep generative models, deepfakes have become highly realistic and difficult to detect. These technologies pose serious risks in cybersecurity, including impersonation attacks, fake news dissemination, and biometric authentication bypass. 
+Deepfakes are AI-generated or manipulated multimedia content designed to mimic real human identities. With the rapid development of deep generative models, deepfakes have become highly realistic and difficult to detect. These technologies pose serious risks in cybersecurity, including impersonation attacks, fake news dissemination, and biometric authentication bypass \cite{li2019deepfake} \cite{farid2009forgery}. 
 
-Traditional detection systems rely primarily on visual artifacts; however, modern deepfakes minimize such inconsistencies. This has led to increased interest in multimodal detection systems that analyze both audio and visual inconsistencies along with temporal behavior.
-
+Traditional detection systems rely primarily on visual artifacts; however, modern deepfakes minimize such inconsistencies. This has led to increased interest in multimodal detection systems that analyze both audio and visual inconsistencies along with temporal behavior \cite{rossler2019faceforensics} \cite{jung2020deepvision}.
 The objective of this research is to develop a robust multimodal framework capable of detecting deepfakes under real-world conditions.
 
 
@@ -148,7 +147,7 @@ The objective of this research is to develop a robust multimodal framework capab
 \label{ch:literature_survey}
 \section{Visual Detection Methods}
 \label{sec:visual_detection_methods}
-Early research focused on visual inconsistencies in manipulated videos. Works such as FaceForensics++ by Andreas Rossler introduced benchmark datasets and CNN-based detection models. Architectures like XceptionNet and EfficientNet were widely used.
+Early research focused on visual inconsistencies in manipulated videos. Works such as FaceForensics++ by Andreas Rossler introduced benchmark datasets and CNN-based detection models \cite{rossler2019faceforensics}. Architectures like XceptionNet and EfficientNet were widely used.
 These methods detect:
 \begin{itemize}
 \item testure artifacts
@@ -156,15 +155,15 @@ These methods detect:
 \item lighting inconsistencies
 \end{itemize}
 
-However, they fail under compression and unseen manipulations.
+However, they fail under compression and unseen manipulations \cite{li2019deepfake}.
 
 \section{Audio-Based Detection Methods}
 \label{sec:audioBased_detection_methods}
-Audio deepfake detection uses MFCC features, spectrograms, and transformer models. ASVspoof datasets became standard benchmarks. Despite good performance on known attacks, modern neural voice synthesis reduces detectable artifacts significantly.
+Audio deepfake detection uses MFCC features, spectrograms, and transformer models. ASVspoof datasets became standard benchmarks \cite{asvspoof2021}. Despite good performance on known attacks, modern neural voice synthesis reduces detectable artifacts significantly.
 
 \section{Temporal and Multimodal Methods}
 \label{sec:temporal_and_multimodal_methods}
-Temporal models analyze motion consistency across frames, detecting blinking patterns and lip-sync mismatches. Multimodal approaches combine audio-visual features using fusion networks.
+Temporal models analyze motion consistency across frames, detecting blinking patterns and lip-sync mismatches \cite{jung2020deepvision}. Multimodal approaches combine audio-visual features using fusion networks.
 These systems outperform single-modality models but still face:
 \begin{itemize}
 \item high-computational cost
@@ -203,10 +202,10 @@ Final classification outputs real/fake probability.
 \section{Dataset}
 \label{sec:dataset}
 \begin{itemize}
-\item FaceForensics++
+\item FaceForensics++ \cite{rossler2019faceforensics}
 \item Celeb-DF
 \item DFDC
-\item ASVspoof
+\item ASVspoof \cite{asvspoof2021}
 \end{itemize}
 
 Preprocessing includes face extraction, audio segmentation, and normalization.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.30)  13 MAY 2026 04:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.30)  13 MAY 2026 07:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -615,7 +615,7 @@ Chapter 1.
 
 
 ]
-Package marginnote Info: Using workaround for absolute page number on input line 147.
+Package marginnote Info: Using workaround for absolute page number on input line 146.
 
 Chapter 2.
 ------------------------------------------------------------------------------
@@ -644,11 +644,7 @@ Chapter 5.
 ------------------------------------------------------------------------------
 [7
 
-] (Thesis.bbl
-
-LaTeX Warning: Empty `thebibliography' environment on input line 24.
-
-) [8
+] (Thesis.bbl) [8
 
 
 ] (Thesis.aux)
@@ -660,17 +656,17 @@ Package rerunfilecheck Info: File `Thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 1AA452541E67709A20D2C18731273857;3204.
  ) 
 Here is how much of TeX's memory you used:
- 14013 strings out of 467871
- 222774 string characters out of 5417892
- 627364 words of memory out of 5000000
- 42626 multiletter control sequences out of 15000+600000
- 635487 words of font info for 68 fonts, out of 8000000 for 9000
+ 14025 strings out of 467871
+ 222998 string characters out of 5417892
+ 628364 words of memory out of 5000000
+ 42632 multiletter control sequences out of 15000+600000
+ 635834 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 78i,11n,81p,1237b,520s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\TikTak\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/TikTak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/TikTak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/TikTak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/TikTak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl12.pfb>
-Output written on Thesis.pdf (19 pages, 102511 bytes).
+ 78i,11n,81p,1297b,520s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\TikTak\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/TikTak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/TikTak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/TikTak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/TikTak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Users/TikTak/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on Thesis.pdf (19 pages, 123484 bytes).
 PDF statistics:
- 239 PDF objects out of 1000 (max. 8388607)
- 48 named destinations out of 1000 (max. 500000)
+ 262 PDF objects out of 1000 (max. 8388607)
+ 53 named destinations out of 1000 (max. 500000)
  177 words of extra memory for PDF output out of 10000 (max. 10000000)
 

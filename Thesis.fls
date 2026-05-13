@@ -236,6 +236,7 @@ INPUT C:\Users\TikTak\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm12
 INPUT .\Thesis.bbl
 INPUT .\Thesis.bbl
 INPUT Thesis.bbl
+INPUT C:\Users\TikTak\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti12.tfm
 INPUT Thesis.aux
 INPUT .\Thesis.out
 INPUT .\Thesis.out
@@ -249,3 +250,5 @@ INPUT C:\Users\TikTak\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\
 INPUT C:\Users\TikTak\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT C:\Users\TikTak\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsl12.pfb
 INPUT C:\Users\TikTak\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsl12.pfb
+INPUT C:\Users\TikTak\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmti12.pfb
+INPUT C:\Users\TikTak\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmti12.pfb
